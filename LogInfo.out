@@ -1,0 +1,5 @@
+2020-05-24 15:18:27 INFO  TestListener:75 -test started.
+2020-05-24 15:18:44 INFO  TestListener:59 -loginTest2 started.
+2020-05-24 15:18:44 INFO  AssertionHelper:31 -Making script PASS
+2020-05-24 15:18:44 INFO  TestListener:94 -loginTest2 passed.
+2020-05-24 15:18:49 INFO  TestListener:179 -test finished.
