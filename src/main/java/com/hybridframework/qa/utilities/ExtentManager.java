@@ -28,7 +28,8 @@ public class ExtentManager
         }
       private static ExtentReports createInstance() throws IOException {
             Date d=new Date();
-            String fileName="AutomationReport_"+d.toString().replace(":","_").replace(" ","_")+".html";
+            //String fileName="AutomationReport_"+d.toString().replace(":","_").replace(" ","_")+".html";
+            String fileName="ExtentReport.html";
             String directory=ResourceHelper.getResourcePath("src/test/output/TestReport/");
             //new File(directory).mkdirs();
             String path=directory+fileName;

@@ -33,3 +33,5 @@ target/
 pomall.xml
 *.exe
 TestBaseBackup.java
+output
+LogInfo.out
