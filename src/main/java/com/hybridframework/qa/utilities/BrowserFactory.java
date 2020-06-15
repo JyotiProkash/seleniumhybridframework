@@ -35,7 +35,8 @@ public class BrowserFactory
           else if (PropertyManager.getProperty("basicinfo.properties", "browser").equalsIgnoreCase("chrome"))
           {
               //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"src\\main\\resources\\drivers\\chromedriver.exe");
-              WebDriverManager.chromedriver().version(PropertyManager.getProperty("basicinfo.properties", "browser.chrome.version"));
+              //WebDriverManager.chromedriver().version(PropertyManager.getProperty("basicinfo.properties", "browser.chrome.version"));
+              WebDriverManager.chromedriver().arch64().setup();
               aBrowser=new ChromeDriver();
           }
           else if (PropertyManager.getProperty("basicinfo.properties", "browser").equalsIgnoreCase("ie"))
