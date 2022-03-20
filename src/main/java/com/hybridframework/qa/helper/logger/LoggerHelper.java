@@ -32,8 +32,4 @@ public class LoggerHelper
              return Logger.getLogger(classname);
          }
 
-      /*public static void main(String[] args) throws IOException {
-          Logger log=LoggerHelper.getLogger(LoggerHelper.class);
-          log.info("I am an Engineer");
-      }*/
   }
