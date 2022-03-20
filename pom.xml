@@ -12,22 +12,27 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <webdrivermanager.chrome.version>3.7.1</webdrivermanager.chrome.version>
-        <selenium.java.version>4.0.0-alpha-5</selenium.java.version>
+        <webdrivermanager.chrome.version>5.1.0</webdrivermanager.chrome.version>
+        <selenium.java.version>4.1.2</selenium.java.version>
         <selenium.server.version>4.0.0-alpha-2</selenium.server.version>
-        <testng.version>7.1.0</testng.version>
+        <testng.version>7.5</testng.version>
         <apache.poi.version>5.2.1</apache.poi.version>
         <apache.poi.ooxml.version>5.2.1</apache.poi.ooxml.version>
         <apache.poi.ooxml.schema>4.1.2</apache.poi.ooxml.schema>
-        <apache.commons.codec>1.14</apache.commons.codec>
-        <apache.xmlbeans.version>3.1.0</apache.xmlbeans.version>
+        <apache.commons.codec>1.15</apache.commons.codec>
+        <apache.xmlbeans.version>5.0.3</apache.xmlbeans.version>
         <log4j.api.version>2.17.2</log4j.api.version>
         <log4j.core.version>2.17.2</log4j.core.version>
-        <mysqlconnector.java.version>8.0.20</mysqlconnector.java.version>
+        <mysqlconnector.java.version>8.0.28</mysqlconnector.java.version>
         <extents.report.relevantcodes.version>2.41.2</extents.report.relevantcodes.version>
-        <extents.report.aventstack.version>4.0.9</extents.report.aventstack.version>
-        <surefire.plugin.version>2.18.1</surefire.plugin.version>
-        <compiler.plugin.version>2.4</compiler.plugin.version>
+        <extents.report.aventstack.version>5.0.9</extents.report.aventstack.version>
+        <surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
+        <compiler.plugin.version>3.10.1</compiler.plugin.version>
+        <jackson.databind.version>2.13.2</jackson.databind.version>
+        <rest.assured.version>4.5.1</rest.assured.version>
+        <jsoup.version>1.14.3</jsoup.version>
+        <java.faker.version>1.0.2</java.faker.version>
+        <ashot.screenshot.version>1.5.4</ashot.screenshot.version>
     </properties>
 
     <dependencies>
@@ -117,11 +122,48 @@
             <artifactId>extentreports</artifactId>
             <version>${extents.report.relevantcodes.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>${extents.report.aventstack.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.databind.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest.assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${java.faker.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>${ashot.screenshot.version}</version>
         </dependency>
 
     </dependencies>
@@ -133,6 +175,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.plugin.version}</version>
                 <configuration>
+<!--                    <parallel>methods</parallel>-->
+<!--                    <threadCount>6</threadCount>-->
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
                         <suiteXmlFile>${project.basedir}/src/main/resources/testSuite/regressionSuite.xml</suiteXmlFile>
