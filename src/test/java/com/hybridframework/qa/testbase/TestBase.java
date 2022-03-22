@@ -1,12 +1,7 @@
 package com.hybridframework.qa.testbase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.hybridframework.qa.helper.browser.BrowserType;
-import com.hybridframework.qa.helper.browser.ChromeBrowser;
-import com.hybridframework.qa.helper.browser.FireFoxBrowser;
 import com.hybridframework.qa.helper.browser.IEBrowser;
-import com.hybridframework.qa.helper.browser.config.ObjectReader;
-import com.hybridframework.qa.helper.browser.config.PropertyReader;
 import com.hybridframework.qa.helper.logger.LoggerHelper;
 import com.hybridframework.qa.helper.wait.WaitHelper;
 import com.hybridframework.qa.utilities.BrowserFactory;
