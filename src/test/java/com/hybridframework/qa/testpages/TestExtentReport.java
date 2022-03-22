@@ -1,8 +1,6 @@
 package com.hybridframework.qa.testpages;
 
 import com.hybridframework.qa.helper.assertion.AssertionHelper;
-import com.hybridframework.qa.sourcepages.BlogHome;
-import com.hybridframework.qa.testbase.TestBase;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

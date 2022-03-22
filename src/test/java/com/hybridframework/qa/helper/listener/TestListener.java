@@ -9,11 +9,7 @@ import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.hybridframework.qa.helper.logger.LoggerHelper;
 import com.hybridframework.qa.helper.resource.ResourceHelper;
-import com.hybridframework.qa.helper.screenshot.ScreenShotHelper;
-import com.hybridframework.qa.testbase.TestBase;
-import com.hybridframework.qa.testpages.TestExtentReport;
 import com.hybridframework.qa.utilities.ExtentManager;
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -21,16 +17,12 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.Reporter;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Base64;
 import java.util.Calendar;
 /**
  * Created by Jyoti 25/04/2020
