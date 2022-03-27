@@ -26,8 +26,8 @@ public class TestBase
       public static ExtentTest test;
       private Logger log= LoggerHelper.getLogger(TestBase.class);
 
-      public final ThreadLocal<DriverManagerAbstract> driverManager = new ThreadLocal<>();
-      public final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+      private final ThreadLocal<DriverManagerAbstract> driverManager = new ThreadLocal<>();
+      private final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
       private void setDriverManager(DriverManagerAbstract driverManager){
           this.driverManager.set(driverManager);
