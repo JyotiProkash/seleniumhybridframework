@@ -26,14 +26,14 @@ public class TestBase
       public static ExtentTest test;
       private Logger log= LoggerHelper.getLogger(TestBase.class);
 
-      private final ThreadLocal<DriverManagerAbstract> driverManager = new ThreadLocal<>();
-      private final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+      public final ThreadLocal<DriverManagerAbstract> driverManager = new ThreadLocal<>();
+      public final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
       private void setDriverManager(DriverManagerAbstract driverManager){
           this.driverManager.set(driverManager);
       }
 
-      protected DriverManagerAbstract getDriverManager(){
+      public DriverManagerAbstract getDriverManager(){
           return this.driverManager.get();
       }
 
@@ -41,7 +41,7 @@ public class TestBase
           this.driver.set(driver);
       }
 
-      protected WebDriver getDriver(){
+      public WebDriver getDriver(){
           return this.driver.get();
       }
 

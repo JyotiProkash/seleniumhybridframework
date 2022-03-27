@@ -1,6 +1,7 @@
 package com.hybridframework.qa.testpages;
 
 import com.hybridframework.qa.helper.logger.LoggerHelper;
+import com.hybridframework.qa.testbase.TestBase;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 

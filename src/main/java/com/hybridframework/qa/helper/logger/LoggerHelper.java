@@ -1,6 +1,6 @@
 package com.hybridframework.qa.helper.logger;
 
-import com.hybridframework.qa.utilities.PropertyManager;
+import com.hybridframework.qa.utils.PropertyUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -27,7 +27,7 @@ public class LoggerHelper
                {
                    return Logger.getLogger(classname);
                }
-             PropertyConfigurator.configure(PropertyManager.getProperty("log4j.properties"));
+             PropertyConfigurator.configure(PropertyUtils.propertyLoader("log4j.properties"));
              root=true;
              return Logger.getLogger(classname);
          }

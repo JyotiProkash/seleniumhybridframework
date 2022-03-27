@@ -9,7 +9,8 @@ import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.hybridframework.qa.helper.logger.LoggerHelper;
 import com.hybridframework.qa.helper.resource.ResourceHelper;
-import com.hybridframework.qa.utilities.ExtentManager;
+import com.hybridframework.qa.testbase.TestBase;
+import com.hybridframework.qa.utils.ExtentManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -105,7 +106,7 @@ public class TestListener implements ITestListener {
                 "Exception, click to see details:" + "</font></b></summary>" +
                 exceptionMessage.replaceAll(",", "<br>") + "</details>\n");
         //WebDriver driver = ((TestBase)result.getInstance()).driver;
-          String path = captureScreen(((TestBase)result.getInstance()).driver, result.getMethod().getMethodName());
+          String path = captureScreen(((TestBase)result.getInstance()).getDriverManager().getDriver(), result.getMethod().getMethodName());
 
           try
           {

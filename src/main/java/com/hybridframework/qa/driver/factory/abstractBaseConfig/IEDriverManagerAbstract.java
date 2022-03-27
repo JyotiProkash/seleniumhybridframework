@@ -1,15 +1,10 @@
 package com.hybridframework.qa.driver.factory.abstractBaseConfig;
 
-import com.hybridframework.qa.utilities.PropertyManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.ElementScrollBehavior;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.io.IOException;
 
 /**
  * Created by Jyoti on 20/04/2020
