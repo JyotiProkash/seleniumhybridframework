@@ -1,5 +1,6 @@
 package com.hybridframework.qa.pagebase;
 
+import com.hybridframework.qa.utils.ConfigLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,9 +23,11 @@ public class BasePage {
         wait=new WebDriverWait(driver, Duration.ofSeconds(30));
       }
 
-      public void load(String endpoint){
-        driver.get(endpoint);
-      }
+      public void load(String endpoint)
+       {
+          driver.get(ConfigLoader.getInstance().getBaseUrl()+endpoint);
+
+       }
 
       public void waitForOverlaysToDisappear(By overlay){
         List<WebElement> overlays = driver.findElements(overlay);
