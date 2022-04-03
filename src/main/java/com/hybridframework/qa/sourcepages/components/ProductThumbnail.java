@@ -4,6 +4,9 @@ import com.hybridframework.qa.pagebase.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+/**
+ * Created by Jyoti 03/04/2022
+ */
 
 public class ProductThumbnail extends BasePage {
     private final By viewCartLink = By.cssSelector("a[title='View cart']");

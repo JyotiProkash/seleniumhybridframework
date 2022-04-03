@@ -6,8 +6,9 @@ import com.hybridframework.qa.sourcepages.components.MyHeader;
 import com.hybridframework.qa.sourcepages.components.ProductThumbnail;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-
-import java.io.IOException;
+/**
+ * Created by Jyoti 03/04/2022
+ */
 
 public class HomePage extends BasePage {
     public MyHeader getMyHeader() {
@@ -20,8 +21,8 @@ public class HomePage extends BasePage {
 
     private MyHeader myHeader;
     private ProductThumbnail productThumbnail;
-    private final Logger log= LoggerHelper.getLogger(HomePage.class);
-    public HomePage(WebDriver driver) throws IOException {
+    //private final Logger log= LoggerHelper.getLogger(HomePage.class);
+    public HomePage(WebDriver driver) {
         super(driver);
         myHeader = new MyHeader(driver);
         productThumbnail = new ProductThumbnail(driver);

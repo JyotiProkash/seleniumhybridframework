@@ -6,6 +6,7 @@ import com.hybridframework.qa.constants.DriverType;
 import com.hybridframework.qa.driver.factory.abstractBaseConfig.DriverManagerAbstract;
 import com.hybridframework.qa.driver.factory.abstractBaseConfig.DriverManagerFactoryAbstract;
 import com.hybridframework.qa.helper.logger.LoggerHelper;
+import com.hybridframework.qa.utils.CookieUtils;
 import io.restassured.http.Cookies;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Cookie;
@@ -19,12 +20,12 @@ import java.util.List;
 /**
  * Updated by Jyoti 21/04/2020
  */
-public class TestBase
+public class BaseTest
   {
       //public WebDriver driver;
       public static ExtentReports extent;
       public static ExtentTest test;
-      private Logger log= LoggerHelper.getLogger(TestBase.class);
+      //private Logger log= LoggerHelper.getLogger(BaseTest.class);
 
       private final ThreadLocal<DriverManagerAbstract> driverManager = new ThreadLocal<>();
       private final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -44,11 +45,6 @@ public class TestBase
       public WebDriver getDriver(){
           return this.driver.get();
       }
-
-
-      public TestBase() throws IOException {
-      }
-
 
       @BeforeSuite
       public void beforeSuite() throws IOException
@@ -115,11 +111,11 @@ public class TestBase
             //BrowserFactory.closeABrowser(driver);
         }
 
-/*      public void injectCookiesToBrowser(Cookies cookies){
+      public void injectCookiesToBrowser(Cookies cookies){
           List<Cookie> seleniumCookies = new CookieUtils().convertRestAssuredCookiesToSeleniumCookies(cookies);
           for(Cookie cookie: seleniumCookies){
               System.out.println(cookie.toString());
               getDriver().manage().addCookie(cookie);
           }
-      }*/
+      }
   }
