@@ -42,13 +42,13 @@ public class BrowserFactory
           else if (PropertyManager.getProperty("basicinfo.properties", "browser").equalsIgnoreCase("ie"))
           {
               //System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\IEDriverServer.exe");
-              WebDriverManager.iedriver().arch32().version(PropertyManager.getProperty("basicinfo.properties", "browser.ie.version")).setup();
+              WebDriverManager.iedriver().arch32().browserVersion(PropertyManager.getProperty("basicinfo.properties", "browser.ie.version")).setup();
               aBrowser=new InternetExplorerDriver();
           }
           else if (PropertyManager.getProperty("basicinfo.properties", "browser").equalsIgnoreCase("edge"))
           {
               //System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\msedgedriver.exe");
-              WebDriverManager.edgedriver().version(PropertyManager.getProperty("basicinfo.properties", "browser.edge.version")).setup();
+              WebDriverManager.edgedriver().browserVersion(PropertyManager.getProperty("basicinfo.properties", "browser.edge.version")).setup();
               aBrowser=new EdgeDriver();
           }
           else if (PropertyManager.getProperty("basicinfo.properties", "browser").equalsIgnoreCase("safari"))

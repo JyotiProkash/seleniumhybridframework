@@ -30,7 +30,7 @@ public class IEBrowser
 
       public WebDriver getIExplorerDriver(InternetExplorerOptions cap) throws IOException {
              //System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\drivers\\IEDriverServer.exe");
-             WebDriverManager.iedriver().arch32().version(PropertyManager.getProperty("basicinfo.properties", "browser.ie.version")).setup();
+             WebDriverManager.iedriver().arch32().browserVersion(PropertyManager.getProperty("basicinfo.properties", "browser.ie.version")).setup();
              return new InternetExplorerDriver(cap);
 
          }

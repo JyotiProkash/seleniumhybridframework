@@ -21,7 +21,7 @@ public class ChromeBrowser
             option.addArguments("--test-type");
             option.addArguments("--disable-popup-blocking");
             option.addArguments("--start-maximized");
-            option.addArguments("--auto-open-devtools-for-tabs");
+            //option.addArguments("--auto-open-devtools-for-tabs");
             DesiredCapabilities chrome=new DesiredCapabilities();
             chrome.setJavascriptEnabled(true);
             option.setCapability(ChromeOptions.CAPABILITY,option);
@@ -35,19 +35,19 @@ public class ChromeBrowser
             if(PropertyManager.getProperty("basicinfo.properties", "os.name").equalsIgnoreCase("Windows"))
              {
                  //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"src\\main\\resources\\drivers\\chromedriver.exe");
-                 WebDriverManager.chromedriver().version(PropertyManager.getProperty("basicinfo.properties", "browser.chrome.version"));
+                 WebDriverManager.chromedriver().browserVersion(PropertyManager.getProperty("basicinfo.properties", "browser.chrome.version"));
                  return new ChromeDriver(cap);
              }
             else if(PropertyManager.getProperty("basicinfo.properties", "os.name").equalsIgnoreCase("Linux"))
              {
                  //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"src\\main\\resources\\drivers\\chromedriver.exe");
-                 WebDriverManager.chromedriver().version(PropertyManager.getProperty("basicinfo.properties", "browser.chrome.version"));
+                 WebDriverManager.chromedriver().browserVersion(PropertyManager.getProperty("basicinfo.properties", "browser.chrome.version"));
                  return new ChromeDriver(cap);
              }
             else if(PropertyManager.getProperty("basicinfo.properties", "os.name").equalsIgnoreCase("Mac"))
              {
                  //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"src\\main\\resources\\drivers\\chromedriver.exe");
-                 WebDriverManager.chromedriver().version(PropertyManager.getProperty("basicinfo.properties", "browser.chrome.version"));
+                 WebDriverManager.chromedriver().browserVersion(PropertyManager.getProperty("basicinfo.properties", "browser.chrome.version"));
                  return new ChromeDriver(cap);
              }
             return null;
