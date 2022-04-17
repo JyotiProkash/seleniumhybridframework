@@ -1,5 +1,6 @@
 package com.hybridframework.qa.driver.factory.abstractBaseConfig;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -17,7 +18,7 @@ public class ChromeDriverManagerAbstract extends DriverManagerAbstract
             options.addArguments("--test-type");
             options.addArguments("--disable-popup-blocking");
             options.addArguments("--start-maximized");
-            options.addArguments("--auto-open-devtools-for-tabs");
+            //options.addArguments("--auto-open-devtools-for-tabs");
             DesiredCapabilities cap=new DesiredCapabilities();
             cap.setJavascriptEnabled(true);
             cap.setCapability(ChromeOptions.CAPABILITY,options);
@@ -30,8 +31,9 @@ public class ChromeDriverManagerAbstract extends DriverManagerAbstract
         }
 
       @Override
-      protected void startDriver() {
+      public WebDriver startDriver() {
           WebDriverManager.chromedriver().cachePath("Drivers").setup();
           driver = new ChromeDriver(getChromeOptions());
+          return driver;
       }
   }

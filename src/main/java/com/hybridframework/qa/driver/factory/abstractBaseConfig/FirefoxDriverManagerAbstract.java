@@ -1,6 +1,7 @@
 package com.hybridframework.qa.driver.factory.abstractBaseConfig;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -22,9 +23,10 @@ public class FirefoxDriverManagerAbstract extends DriverManagerAbstract
          }
 
       @Override
-      protected void startDriver() {
+      public WebDriver startDriver() {
           WebDriverManager.firefoxdriver().cachePath("Drivers").setup();
           driver = new FirefoxDriver(getFireFoxOptions());
           driver.manage().window().maximize();
+          return driver;
       }
   }

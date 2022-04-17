@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 public abstract class DriverManagerAbstract {
     protected WebDriver driver;
 
-    protected abstract void startDriver();
+    public abstract WebDriver startDriver();
 
     public void quitDriver(){
         if(driver != null){
