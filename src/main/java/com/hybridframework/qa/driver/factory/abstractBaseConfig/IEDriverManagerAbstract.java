@@ -1,6 +1,7 @@
 package com.hybridframework.qa.driver.factory.abstractBaseConfig;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.ElementScrollBehavior;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
@@ -25,9 +26,10 @@ public class IEDriverManagerAbstract extends DriverManagerAbstract
          }
 
       @Override
-      protected void startDriver() {
+      public WebDriver startDriver() {
           WebDriverManager.iedriver().cachePath("Drivers").setup();
           driver = new InternetExplorerDriver(getIExplorerCapabilities());
           driver.manage().window().maximize();
+          return driver;
       }
   }

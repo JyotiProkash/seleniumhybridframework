@@ -1,6 +1,5 @@
 package com.hybridframework.qa.utils;
 import com.hybridframework.qa.constants.EnvType;
-
 import java.util.Properties;
 
 /**
