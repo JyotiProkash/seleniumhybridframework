@@ -11,7 +11,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+        <java.version>18</java.version>
         <webdrivermanager.chrome.version>5.1.0</webdrivermanager.chrome.version>
         <selenium.java.version>4.1.2</selenium.java.version>
         <selenium.server.version>4.0.0-alpha-2</selenium.server.version>
@@ -23,9 +25,11 @@
         <apache.xmlbeans.version>5.0.3</apache.xmlbeans.version>
         <log4j.api.version>2.17.2</log4j.api.version>
         <log4j.core.version>2.17.2</log4j.core.version>
+        <log4j.version>1.2.17</log4j.version>
         <mysqlconnector.java.version>8.0.28</mysqlconnector.java.version>
         <extents.report.relevantcodes.version>2.41.2</extents.report.relevantcodes.version>
-        <extents.report.aventstack.version>3.1.5</extents.report.aventstack.version>
+        <freemaker.version>2.3.31</freemaker.version>
+        <extents.report.aventstack.version>5.0.9</extents.report.aventstack.version>
         <surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
         <compiler.plugin.version>3.10.1</compiler.plugin.version>
         <jackson.databind.version>2.13.2</jackson.databind.version>
@@ -99,16 +103,22 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
-        <dependency>
+<!--        <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-1.2-api</artifactId>
             <version>${log4j.api.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j.core.version}</version>
         </dependency>
+<!--        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <scope>compile</scope>
+        </dependency>-->
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
@@ -128,6 +138,13 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>${extents.report.aventstack.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemaker.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
