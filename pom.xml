@@ -15,7 +15,7 @@
         <webdrivermanager.chrome.version>5.1.0</webdrivermanager.chrome.version>
         <selenium.java.version>4.0.0-alpha-5</selenium.java.version>
         <selenium.server.version>4.0.0-alpha-2</selenium.server.version>
-        <testng.version>7.1.0</testng.version>
+        <testng.version>7.7.0</testng.version>
         <apache.poi.version>5.2.1</apache.poi.version>
         <apache.poi.ooxml.version>5.2.1</apache.poi.ooxml.version>
         <apache.poi.ooxml.schema>4.1.2</apache.poi.ooxml.schema>
